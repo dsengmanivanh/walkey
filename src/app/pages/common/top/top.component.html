@@ -1,0 +1,8 @@
+<div class="grid grid-pad">
+    <a *ngFor="let walk of walks" href="#" [routerLink]="['/walk', walk._id]" class="col-1-4">
+        <div class="module walk">
+            <h4>{{walk.path.name}}</h4>
+        </div>
+    </a>
+</div>
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>

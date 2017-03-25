@@ -1,0 +1,30 @@
+<div class="cbp-fbscroller">
+    <section id="screensection1">
+        <header class="codrops-header">
+            <h1 class="header-title">
+                <span class="header-title__main">{{name}}</span>
+                <span class="header-title__part">{{summary}}</span>
+                <span class="header-title__sub">An interactive storytelling with Walkey.</span>
+                <span class="header-title__sub"><a routerLink="/dashboard" routerLinkActive="active" class="icon-arrow-left" data-info="previous">back</a>
+                </span>
+            </h1>
+        </header>
+    </section>
+    <div class="leftright">
+        <div class="left-half">
+            <ul class="cbp_tmtimeline" *ngFor="let description of descriptions">
+                <li>
+                    <div class="cbp_tmlabel">
+                        <h2>description.name</h2>
+                        <h2>description.photo</h2>
+                        <h2>description.origin<br>description.destination</h2>
+                        <p>{{description.text}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right-half">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>

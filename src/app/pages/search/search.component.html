@@ -1,0 +1,18 @@
+<div class="leftright" [ngSwitch]="errorMessage">
+    <div class="left-half">
+        <div class="topdown">
+            <div class="top-half">
+                <a routerLink="/dashboard" routerLinkActive="active">back</a><br>
+                <search-bar></search-bar>
+                <search-filter (weatherChange)="onWeatherChanged($event)" *ngSwitchCase="'none'"></search-filter>
+            </div>
+            <div class="down-half">
+                <around [(walksValue)]="walkAround" [(markersValue)]="markers" *ngSwitchCase="'none'"></around>
+                <error *ngSwitchCase="'error'"></error>
+            </div>
+        </div>
+    </div>
+    <div class="right-half">
+        <div id="mapsearch"></div>
+    </div>
+</div>

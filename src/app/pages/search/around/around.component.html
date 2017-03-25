@@ -1,0 +1,33 @@
+<!--div ng-if="walksValue !=null">
+    <div class="grid grid-pad">
+        <a *ngFor="let walk of walksValue" (click)="gotoWalkId(walk._id)" on-mouseover="mouseOver(walk._id)" on-mouseout="mouseOut(walk._id)" class="col-1-4">
+            <div class="module walk" id="{{walk._id}}">
+                <h4>{{walk.path.name}}</h4>
+                <h5>{{walk.path.segment.destination.name}}</h5>
+                <h5>{{walk.path.feature.weather}}</h5>
+            </div>
+        </a>
+    </div>
+</div-->
+
+
+<div ng-if="walksValue !=null">
+    <div class="thumbMail_parent">
+        <a *ngFor="let walk of walksValue" (click)="gotoWalkId(walk._id)" on-mouseover="mouseOver(walk._id)" on-mouseout="mouseOut(walk._id)" class="col-1-4">
+            <div class="thumbMail">
+                <div class="thumbMail_top">
+                    <div class="screensection6">
+                    </div>
+                </div>
+                <div class="thumbMail_down">
+                    <div class="thumbMail_title" id="{{walk._id}}">
+                        <h1>{{walk.path.name}}</h1>
+                        <h2>De {{walk.path.segment.origin.name}}</h2>
+                        <h2>au {{walk.path.segment.destination.name}}</h2>
+                        <h2>balade idéal lorsqu'il fait: {{walk.path.feature.weather}}</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

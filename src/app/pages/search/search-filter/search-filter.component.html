@@ -1,0 +1,5 @@
+<div class="well">
+    <label class="radio-inline" *ngFor="let weather of weatherValue">
+        <input type="radio" name="weather" [value]="weather.value" (change)="sendWeather(weather.value)"> {{weather.display}}
+</label>
+</div>

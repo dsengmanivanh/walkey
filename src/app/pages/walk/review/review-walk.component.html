@@ -1,0 +1,10 @@
+<div *ngIf="reviewsValue">
+    <h3>review</h3>
+    <div *ngFor="let review of reviewsValue">
+        <dl>
+            <dt>description</dt>
+            <dd>{{review.rate}}/5</dd>
+            <dd>{{review.description}}</dd>
+        </dl>
+    </div>
+</div>

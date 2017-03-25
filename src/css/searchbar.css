@@ -1,0 +1,191 @@
+/* Icons */
+
+.icon {
+    display: block;
+    width: 3em;
+    height: 3em;
+    margin: 0 auto;
+    fill: #4CAF50;
+}
+
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+
+/* SEARCH BAR */
+
+.searchbar {
+    padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.searchinput {
+    width: 70%;
+    font-family: inherit;
+    font-size: 2em;
+    text-decoration: underline;
+    color: #848484;
+    padding: 10px 5px;
+}
+
+.searchbar_box_city {
+    border-width: 1px;
+    width: 20%;
+    border-style: solid;
+    border-color: #D8D8D8;
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+}
+
+.searchbar_box_search {
+    border-width: 1px;
+    width: 20%;
+    border-style: solid;
+    border-color: #D8D8D8;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 10px 5px;
+}
+
+.searchbar_box_icon {
+    border-width: 1px;
+    width: 20%;
+    border-style: solid;
+    border-color: #D8D8D8;
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+    display: none;
+}
+
+.searchbar_box_icon:hover {
+    background: #81c784;
+    cursor: pointer;
+}
+
+.search {
+    font-family: inherit;
+    font-size: 1.5em;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 10px 7px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.search:hover {
+    background: #81c784;
+    cursor: pointer;
+}
+
+.city {
+    font-family: inherit;
+    font-size: 1.5em;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 10px 7px;
+    width: 80%;
+    color: #848484;
+    cursor: hand;
+}
+
+
+/* a revoir */
+
+.select_box select {
+    font-family: inherit;
+    font-size: 1.5em;
+    border: none;
+    color: #848484;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+}
+
+
+/* GOOGLE AUTOCOMPLETE */
+
+.pac-container {
+    z-index: 100 !important;
+    width: auto !important;
+}
+
+.pac-container:empty {
+    display: none !important;
+}
+
+
+/* SMALL SCREEN */
+
+@media only screen and (max-width: 1024px) {
+    .searchbar_box_search,
+    .search,
+    .searchbar_box_city,
+    .city {
+        display: none;
+    }
+    .searchbar_box_icon {
+        display: inline;
+        border-width: 0;
+        border-bottom-width: 2px;
+        border-color: #4CAF50;
+    }
+    .searchinput {
+        border-radius: 0;
+        border-width: 0;
+        border-bottom-width: 2px;
+        border-color: #4CAF50;
+    }
+}
+
+
+/* ----------- ANDROID ----------- */
+
+
+/*@media only screen and (min-width: 568px) and (max-width: 1024px) {
+    .searchbar_box_icon {
+        display: inline;
+        border-width: 0;
+        border-bottom-width: 2px;
+        border-color: #4CAF50;
+    }
+    .searchinput {
+        border-radius: 0;
+        border-width: 0;
+        border-bottom-width: 2px;
+        border-color: #4CAF50;
+    }
+}*/
+
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+
+/* Portrait and Landscape */
+
+@media only screen and (min-width: 320px) and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .searchbar_box_icon {
+        display: inline;
+        border-width: 0;
+    }
+    .searchinput {
+        border-radius: 0;
+        border-width: 0;
+        border-bottom-width: 2px;
+        border-color: #4CAF50;
+    }
+}

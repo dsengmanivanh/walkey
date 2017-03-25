@@ -1,0 +1,15 @@
+<div *ngIf="nameValue">
+    <blockquote>
+        <dl>
+            <dt>
+                <h1>{{nameValue}}</h1>
+            </dt>
+            <dd>
+                <h4>{{summaryValue}}</h4>
+            </dd>
+        </dl>
+        <footer><cite>{{userValue}}</cite></footer>
+        <dd *ngIf="averageValue"><p id="average">{{averageValue}}/5</p></dd>
+        <dd *ngIf="walkIdValue"><a [routerLink]="['/walk', walkIdValue]">go</a></dd>
+    </blockquote>
+</div>

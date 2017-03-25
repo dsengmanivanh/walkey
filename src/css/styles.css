@@ -1,0 +1,108 @@
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+#loading {
+    background-image: url(../assets/images/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+html,
+body,
+.cbp-fbscroller,
+.cbp-fbscroller section {
+    height: 100%;
+}
+
+
+/* SPLIT VERTICAL SCREEN */
+
+.leftright {
+    display: flex;
+    height: 100%;
+    width: 100vw;
+}
+
+.leftright .left-half {
+    flex: 1;
+    overflow: auto;
+}
+
+.leftright .right-half {
+    flex: 1;
+}
+
+
+/* SPLIT HORIZONTAL SCREEN */
+
+.topdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.topdown .top-half {
+    flex: 1;
+    height: 20vh;
+}
+
+.topdown .down-half {
+    flex: 1;
+    height: 80vh;
+    overflow: auto;
+}
+
+
+/* background-attachment does the trick */
+
+.cbp-fbscroller section {
+    position: relative;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.no-touch .cbp-fbscroller section {
+    background-attachment: fixed;
+}
+
+
+/* SMALL SCREEN */
+
+@media all and (max-width: 1024px) {
+    /* Pattern styles */
+    html,
+    body,
+    #loading,
+    .cbp-fbscroller,
+    .cbp-fbscroller section {
+        height: auto;
+    }
+    /* SPLIT VERTICAL SCREEN  */
+    .leftright {
+        height: auto;
+        width: auto;
+        flex-direction: column;
+    }
+    .leftright .left-half {
+        overflow: initial;
+    }
+}
